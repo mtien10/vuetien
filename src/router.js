@@ -6,9 +6,31 @@ import Page2Tien from '@/pages/Page2Tien';
 import Page3Tien from '@/pages/Page3Tien';
 import LoginTien from './LoginTien';
 
+import CategoryList from '@/pages/staff/category/categoryList';
+import ProductList from '@/pages/staff/product/productList';
+import OrderList from '@/pages/staff/order/orderList';
+
 Vue.use(VueRouter);
 
 const routes = [
+    {
+        path: '/staff',
+        name: 'categoryList',
+        component: CategoryList,
+        meta: {page: 1},
+    },
+    {
+        path: '/staff/product',
+        name: 'productList',
+        component: ProductList,
+        meta: {page: 2},
+    },
+    {
+        path: '/staff/order',
+        name: 'orderList',
+        component: OrderList,
+        meta: {page: 3},
+    },
     {
         path: '/login',
         name: 'login',
